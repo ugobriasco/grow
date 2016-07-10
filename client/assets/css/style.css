@@ -1,0 +1,74 @@
+html {
+  /*position: relative;*/
+  min-height: 100%;
+  /*margin-bottom: 60px;
+  padding-top: 80px;*/
+   
+}
+body {
+    
+}
+
+
+nav{
+ 
+}
+.profile-image {
+    max-height: 25px;
+
+}
+
+
+
+header {
+  position: realtive;
+  padding-top:80px;
+  
+}
+
+header h1{color:white;}
+
+.landing-page{
+  background-color:rgba(0, 0, 0, 0.5);
+  padding-bottom:10%;
+  padding-top:10%;
+}
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -1;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  opacity: 0.4;
+}
+
+.page-wrap{
+  padding-top: 10%;
+  min-height:100%;
+  margin.bottom: -80px;
+
+}
+
+footer {
+  /*position: absolute;
+  bottom: 0;*/
+  width: 100%;
+  height: 80px;
+  background-color: #f5f5f5;
+  /*z-index:+100;*/
+}
+
+
+

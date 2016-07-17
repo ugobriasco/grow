@@ -26,4 +26,4 @@ app.use(methodOverride());
 
 //launch
 app.listen(port);
-console.log('SubTool runs at port :' + port);
+console.log('Grow grows at port: ' + port);

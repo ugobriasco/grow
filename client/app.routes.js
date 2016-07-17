@@ -9,7 +9,13 @@ app.config(['$stateProvider','$urlRouterProvider','$locationProvider', function(
     .state('home',{
     	url: '',
     	templateUrl: '/components/home/home.view.html',
-        controller: '',
+        controller: 'HomeController',
+        caseInsensitiveMatch: true
+    })
+     .state('results',{
+      url: '/results',
+      templateUrl: '/components/results/results.view.html',
+        controller: 'ResultsController',
         caseInsensitiveMatch: true
     });
    

@@ -24,7 +24,25 @@ app.directive('palette', function(){
 	return{
 		restrict: 'A',
 		replace: true,
-		controller: '',
-		templateUrl: '/shared/partials/palette.view.html'
+		controller: 'PaletteController',
+		templateUrl: '/components/palette/palette.view.html'
+	}
+});
+
+app.directive('balancesheet', function(){
+	return{
+		restrict: 'A',
+		replace: true,
+		controller: 'BalanceSheetController',
+		templateUrl: '/components/results/partials/results.balanceSheet.view.html'
+	}
+});
+
+app.directive('kpi', function(){
+	return{
+		restrict: 'A',
+		replace: true,
+		controller: 'KpiController',
+		templateUrl: '/components/results/partials/results.kpi.view.html'
 	}
 });

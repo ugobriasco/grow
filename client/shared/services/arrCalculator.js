@@ -1,12 +1,13 @@
 app.service('ArrCalc',[function(){
 
+	//preset
 	var balanceSheet = {
 		currency: '€',
 		arr: 100,
 		arc: 30,
 		churn: 1,
 		acv_cost:0,
-		gei: 1
+		gei: 0.8
 	};
 
 
@@ -27,7 +28,6 @@ app.service('ArrCalc',[function(){
 	//calc net RR
 	var calcRR 					= function(arr, churn){
 									var rr = arr - churn; 
-									console.log("recurring revenue =" + rr);
 									return rr;
 								}
 	//calc RPM
@@ -39,7 +39,17 @@ app.service('ArrCalc',[function(){
 	//projection of annual recurring revenue
 	var calcARR_n 				= function(arr, churn,acv){var arr_n = arr - churn +acv; return arr_n;}
 
-	//calc all
+	//calc %
+	var calcIndex = function(){
+		
+		balanceSheet.churnIndex = balanceSheet.churn / balanceSheet.arr;
+		balanceSheet.rpmIndex = balanceSheet.rpm / balanceSheet.arr;
+		balanceSheet.arrnIndex = (balanceSheet.arrn - balanceSheet.arr) / balanceSheet.arr;
+		balanceSheet.incomeIndex = balanceSheet.income /balanceSheet.rpm;
+		balanceSheet.acv_costIndex = balanceSheet.acv_cost/balanceSheet.rpm
+		
+		return balanceSheet;
+	}
 
 
 	//get balanceSheet
@@ -50,6 +60,8 @@ app.service('ArrCalc',[function(){
 		balanceSheet.acv = calcACV(balanceSheet.acv_cost,balanceSheet.gei);
 		balanceSheet.income = calcIncome(balanceSheet.rpm, balanceSheet.acv_cost);
 		balanceSheet.arrn = calcARR_n(balanceSheet.arr, balanceSheet.churn, balanceSheet.acv);
+
+		balanceSheet = calcIndex();
 
 		console.log(balanceSheet);
 		return balanceSheet;
@@ -63,19 +75,11 @@ app.service('ArrCalc',[function(){
 		setChurn: 				setChurn,
 		setACVcost: 			setACVcost,
 		setGEI: 				setGEI,
-		calcRPM: 				calcRPM,
-		calcACV: 				calcACV,
-		calcIncome: 			calcIncome,
-		calcARR_n: 				calcARR_n,
 		getBalanceSheet: 		getBalanceSheet
 
 
 	}
 
-	
-
-
-
-
-
 }]);
+
+

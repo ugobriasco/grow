@@ -20,6 +20,16 @@ app.directive('navbar', function(){
 	}
 });
 
+app.directive('navbar1', function(){
+	return{
+		restrict: 'A',
+		replace: true,
+		controller: 'PaletteController',
+		templateUrl: '/shared/partials/navbar1.view.html'
+	}
+});
+
+
 app.directive('palette', function(){
 	return{
 		restrict: 'A',
@@ -44,5 +54,14 @@ app.directive('kpi', function(){
 		replace: true,
 		controller: 'KpiController',
 		templateUrl: '/components/results/partials/results.kpi.view.html'
+	}
+});
+
+app.directive('graphs', function(){
+	return{
+		restrict: 'A',
+		replace: true,
+		controller: 'GraphsController',
+		templateUrl: '/components/results/partials/results.graphs.view.html'
 	}
 });

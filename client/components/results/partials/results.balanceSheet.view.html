@@ -1,54 +1,54 @@
 <div>
 	<table class="table table-responsive table-condensed table-hover">
-		<tr>
+		<tr class="warning">
     		<td>ARRn</td>
     		<td>{{data.arr | currency: data.currency:0}}</td>
-    		<td></td> 
+    		
   		</tr>
-  		<tr>
-    		<td>Chur</td>
+  		<tr class="success">
+    		<td>Churn Rate</td>
     		<td>{{data.churn| currency: data.currency:0}}</td>
-    		<td> rate: {{valuePerc}} % </td> 
+        
   		</tr>
   		<tr class="active">
     		<th>net ARRn</th>
     		<td>{{data.rr | currency: data.currency:0}}</td>
-    		<td></td> 
+    	
   		</tr>
-  		<tr>
+  		<tr class="warning">
     		<td>Recurring Costs</td>
     		<td>{{data.arc | currency: data.currency:0}}</td>
-    		<td></td>  
+    		 
   		</tr>
   		<tr class="active">
     		<th>RPM</th>
     		<td>{{data.rpm | currency: data.currency:0}}</td>
-    		<td> rate: {{valuePerc}} % </td> 
+    		
   		</tr>
-  		<tr>
+  		<tr class="info">
     		<td>ACV Costs</td>
     		<td>{{data.acv_cost | currency: data.currency:0}}</td>
-    		<td> rate: {{valuePerc}} % </td> 
+    		
   		</tr>
   		<tr class="active">
     		<th>Net Income</th>
     		<td>{{data.income | currency: data.currency:0}}</td> 
-    		<td></td> 
+    		
   		</tr>
-  		<tr>
+  		<tr class="success">
     		<td>GEI</td>
     		<td>{{data.gei}}</td> 
-    		<td></td> 
+    		
   		</tr>
   		<tr >
     		<td>ACV</td>
     		<td>{{data.acv | currency: data.currency:0}}</td> 
-    		<td></td> 
+    		 
   		</tr>
   		<tr class="active">
-    		<th>ARRn+1</th>
-    		<td>{{data.arrn | currency: data.currency:0}}</td>
-    		<td> rate: {{valuePerc}} % </td>  
+    		<th>ARRn+1
+        </th>
+    		<td>{{data.arrn | currency: data.currency:0}} <p>({{data.arrnIndex*100}}%)</p></td>
   		</tr>
 
 	</table>

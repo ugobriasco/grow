@@ -9,9 +9,18 @@ app.controller('BalanceSheetController',['$scope', 'ArrCalc', function($scope, A
 	
 	$scope.data = ArrCalc.getBalanceSheet();
 
+	
+
 }]);
 
 app.controller('KpiController',['$scope', 'ArrCalc', function($scope, ArrCalc){
+
+	
+
+}]);
+
+
+app.controller('GraphsController',['$scope', 'ArrCalc', function($scope, ArrCalc){
 
 	
 

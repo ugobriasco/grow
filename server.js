@@ -11,7 +11,7 @@ var app      		= express();
 var port     		= process.env.PORT || 3030;
 
 app.use('/lib', express.static(__dirname + '/node_modules'));
-app.use(express.static(path.join(__dirname, '/client'))); //Expose /client
+app.use(express.static(path.join(__dirname, '/src'))); //Expose /client
 
 
 

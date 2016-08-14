@@ -1,0 +1,30 @@
+<div class="modal-header">
+	<h3>Get data from your customers</h3>
+</div>
+<div class="modal-body">
+	<form class="inline-form">
+		<div class="form-group">
+			<label>Churrn Rate (monthly)</label>
+			<div class="input-group">
+				<input type="number" ng-model="data.churn" class="form-control" placeholder="Amount">
+				<div class="input-group-addon">{{data.currency}}</div>	
+			</div>
+			<p>Churn rate, when applied to a customer base, refers to the proportion of contractual customers or subscribers who leave a supplier during a given time period. It is a possible indicator of customer dissatisfaction, cheaper and/or better offers from the competition, more successful sales and/or marketing by the competition, or reasons having to do with the customer life cycle.</p>
+			<p><strong>ToDo:</strong> Quantify your churn rate in monetary loss, based on your cohort analysis</p>
+		</div>
+		<div class="form-group">
+			<label>Growth Efficency Index (GEI)</label>
+			<div class="input-group">
+				<input type="number" ng-model="data.gei" class="form-control" placeholder="e.g. 0.5">
+				<div class="input-group-addon"> :1</div>
+			</div>
+			
+		</div>
+		<p>You spend <strong>{{data.gei}}{{data.currency}}</strong> to generate <strong>1 MCV</strong> (Monthly Contracting Value)</p>
+		<p>The MCV ist the new revenue brought in by new customers or customers upgrading or renewing their existing contract</p>
+	</form>
+</div>
+<div class="modal-footer">
+	
+	<button type="submit" class="btn btn-success" data-toggle="modal" ng-click="submit(data.churn, data.gei)">Submit</button>
+</div>

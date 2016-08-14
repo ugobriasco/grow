@@ -1,0 +1,56 @@
+<html ng-app="app">
+<html lang="en-us">
+    <head>
+            <title>Grow</title>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="HandheldFriendly" content="True">
+            <meta name="description" content="a tool for subscription based financial models">
+            <meta name="author" content="@ugobriasco">
+            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+            <meta charset="ISO-8859-1">
+
+            <!--Dev-->
+            <link rel='shortcut icon' type='image/x-icon' href='./assets/img/favicon.ico'/>
+            <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css"></link>
+            <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css"></link>
+            <link rel="stylesheet" href="./assets/css/angularchart.css"></link>
+            <link rel="stylesheet" href="./assets/css/style.css"></link>
+
+            <!--Production-->
+            <!--
+            <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"></link> 
+            <link rel="stylesheet" href="./assets/style.min.css"></link> 
+
+
+
+
+
+            -->
+    </head>
+    <body>
+       <div ui-view></div>
+
+       <!--dev-->
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/lib/angular/angular.min.js"></script>
+        <script src="/lib/angular-route/angular-route.min.js"></script>     
+        <script src="/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/lib/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>      
+        <script src="/lib/angular-google-chart/ng-google-chart.min.js"></script>
+        <script src="app.module.js"></script>
+        <script src="app.routes.js"></script>
+        <script src="/shared/services/mrrCalculator.js"></script>
+        <script src="/components/palette/palette.controller.js"></script>
+        <script src="/components/home/home.controller.js"></script>
+        <script src="/components/results/results.controller.js"></script>
+
+        <!--production-->
+
+        <!--<script src="/assets/js/vendor.min.js"></script>-->
+        <!--<script src="app.min.js"></script>-->
+
+    </body>
+</html>

@@ -6,7 +6,7 @@
   </div>
 	<table class="table table-responsive table-condensed table-hover table-striped">
 		<tr>
-        <td class="col-md-1 col-xs-1"><i class="fa fa-line-chart" aria-hidden="true"></i></td>
+        <td class="col-md-1 col-xs-1"> <i class="fa fa-line-chart" aria-hidden="true"></i></td>
         <td ng-hide ="detailsToggle" class="col-md-6 success"> Current monthly recurring revenue</td>
     		<th ng-show ="detailsToggle" class="col-md-6">MRR</th>
     		<th class="col-md-5 col-xs-5 text-center">{{data.mrr | currency: data.currency:00}}</th>
@@ -65,6 +65,5 @@
   		<th ng-show ="detailsToggle" >MRRn+1</th>
   		<th class="text-center">{{data.mrr_next | currency: data.currency:00}} <p>({{data.mrrIndex*100| number:0}}%)</p></th>
 		</tr>
-
 	</table>
 </div>

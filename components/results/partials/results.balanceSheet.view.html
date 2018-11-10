@@ -1,0 +1,70 @@
+<div class="well">
+  <div>
+    <div class="checkbox">
+      <label><input type="checkbox" ng-click="detailsToggle = !detailsToggle" >Detailed view</label>
+    </div>
+  </div>
+	<table class="table table-responsive table-condensed table-hover table-striped">
+		<tr>
+        <td class="col-md-1 col-xs-1"><i class="fa fa-line-chart" aria-hidden="true"></i></td>
+        <td ng-hide ="detailsToggle" class="col-md-6 success"> Current monthly recurring revenue</td>
+    		<th ng-show ="detailsToggle" class="col-md-6">MRR</th>
+    		<th class="col-md-5 col-xs-5 text-center">{{data.mrr | currency: data.currency:00}}</th>
+  	</tr>
+    <tr>
+      <td ><i class="fa fa-users" aria-hidden="true"></i></td>
+      <td ng-hide ="detailsToggle" class="success"> Current monthly customer loss </td>
+    	<td ng-show ="detailsToggle" >Monthly Churn Rate</td>
+    	<td class="text-center">{{data.churn| currency: data.currency:00}}</td>
+		</tr>
+		<tr>
+      <td></td>
+      <td ng-hide ="detailsToggle" class="success">Net annual recurrent revenue</td>
+  		<th ng-show ="detailsToggle" >net MRR</th>
+  		<td class="text-center">{{data.net_mrr | currency: data.currency:00}}</td>
+		</tr>
+		<tr>
+      <td><i class="fa fa-line-chart" aria-hidden="true"></i></td>
+      <td ng-hide ="detailsToggle" class="success">Current monthly recurring costs</td>
+  		<td ng-show ="detailsToggle">Recurring Costs</td>
+  		<td class="text-center">{{data.mrc | currency: data.currency:00}}</td>
+		</tr>
+		<tr>
+      <td></td>
+      <td ng-hide ="detailsToggle" class="success">Recurring Profits</td>
+      <th ng-show ="detailsToggle" >RPM</th>
+    	<th class="text-center">{{data.rpm | currency: data.currency:00}}</th>
+		</tr>
+  	<tr>
+      <td><i class="glyphicon glyphicon-king" aria-hidden="true"></i></td>
+      <td ng-hide ="detailsToggle" class="success"> Budget allocated for acquiring customer value</td>
+    	<td ng-show ="detailsToggle" >Acquisition Costs</td>
+    	<td class="text-center">{{data.cac | currency: data.currency:00}}</td>
+  	</tr>
+  	<tr>
+      <td></td>
+      <td ng-hide ="detailsToggle" class="success">Net savings with the current strategy</td> 
+    	<th ng-show ="detailsToggle" class="">Net Income</th>
+    	<th class="text-center">{{data.income | currency: data.currency:00}}</th>	
+  		</tr>
+		<tr>
+      <td class="col-md-1 col-xs-1"><i class="fa fa-users" aria-hidden="true"></i></td>
+      <td ng-hide ="detailsToggle" class="success"> Growth efficency index (expence for customer acquisition/value aquired)</td> 
+  		<td ng-show ="detailsToggle">GEI</td>
+  		<td class="text-center">{{data.gei}}</td>
+		</tr>
+		<tr >
+      <td></td>
+      <td ng-hide ="detailsToggle" class="success"> Current acquired monthly customer value</td>
+  		<td ng-show ="detailsToggle" >MCV</td>
+  		<td class="text-center">{{data.mcv | currency: data.currency:00}}</td>
+		</tr>
+		<tr>
+      <td></td>
+      <td ng-hide ="detailsToggle" class="success"> Monthly recurrent revenue estimated the next month</td>
+  		<th ng-show ="detailsToggle" >MRRn+1</th>
+  		<th class="text-center">{{data.mrr_next | currency: data.currency:00}} <p>({{data.mrrIndex*100| number:0}}%)</p></th>
+		</tr>
+
+	</table>
+</div>
